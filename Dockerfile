@@ -13,7 +13,7 @@ RUN uv sync --locked --no-dev --no-install-project
 
 ENV PATH="/app/.venv/bin:$PATH"
 
-COPY ..
+COPY . .
 
 EXPOSE 8000
 
