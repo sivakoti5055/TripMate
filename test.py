@@ -1,4 +1,5 @@
 # from tools.tavily_tool import search
+from backend import run_travel_agent
 from tools.flight_tool import search_flights
 
 # res = search("Best Hotels in India")
@@ -17,6 +18,12 @@ from tools.flight_tool import search_flights
 # result = parse_route(query)
 
 # print(result)
-print(search_flights("Plan a 7 days Vizag trip from Bangalore"))
+# print(search_flights("Plan a 7 days Vizag trip from Bangalore"))
 # print("\n" + "=" * 80 + "\n")
 # print(search_flights("all country flight info"))
+
+user_input = input('Enter Travel Request:')
+
+res = run_travel_agent(user_input,'test_user')
+
+print(res["answer"])
